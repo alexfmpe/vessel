@@ -114,7 +114,6 @@ instance (Has' Semigroup k (FlipAp g), GCompare k, Has View k) => Semigroup (Ves
 
 instance (Has' Semigroup k (FlipAp g), GCompare k, Has View k) => Monoid (Vessel k g) where
   mempty = Vessel DMap.empty
-  mappend = (<>)
 
 instance (Has' Semigroup k (FlipAp g), Has' Group k (FlipAp g), GCompare k, Has View k) => Group (Vessel k g) where
   negateG (Vessel m) = Vessel (negateG m) --TODO: Do we know that nullV can't be the result of negateG?

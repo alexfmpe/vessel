@@ -68,7 +68,6 @@ instance (Semigroup (m b) , Semigroup (n (ViewQueryResult a))) => Semigroup (Vie
   ViewHalfMorphism f f' <> ViewHalfMorphism g g' = ViewHalfMorphism (f <> g) (f' <> g')
 
 instance (Monoid (m b) , Monoid (n (ViewQueryResult a))) => Monoid (ViewHalfMorphism m n a b) where
-  mappend = (<>)
   mempty = ViewHalfMorphism mempty mempty
 
 instance
@@ -81,7 +80,6 @@ instance
     ( Monoid (m b), Monoid (m (ViewQueryResult b))
     , Monoid (n a), Monoid (n (ViewQueryResult a))
     )  => Monoid (ViewMorphism m n a b) where
-  mappend = (<>)
   mempty = ViewMorphism mempty mempty
 
 -- | query for two things simultaneously, return as much result as is available.

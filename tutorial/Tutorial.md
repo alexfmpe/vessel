@@ -92,7 +92,6 @@ instance (Monoid g, Eq g, Ord k) => Semigroup (GrpMap k g) where
 
 instance (Monoid g, Eq g, Ord k) => Monoid (GrpMap k g) where
   mempty = GrpMap Map.empty
-  mappend = (<>)
 
 instance (Group g, Eq g, Ord k) => Group (GrpMap k g) where
   negateG (GrpMap xs) = GrpMap $ fmap negateG xs

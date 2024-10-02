@@ -53,7 +53,6 @@ instance (Semigroup (g (First (Maybe a)))) => Semigroup (SingleV a g) where
 
 instance (Monoid (g (First (Maybe a)))) => Monoid (SingleV a g) where
   mempty = SingleV mempty
-  mappend (SingleV x) (SingleV y) = SingleV (mappend x y)
 
 instance (Group (g (First (Maybe a)))) => Group (SingleV a g) where
   negateG (SingleV x) = SingleV (negateG x)

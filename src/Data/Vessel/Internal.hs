@@ -60,7 +60,6 @@ instance Semigroup (v g) => Semigroup (FlipAp g v) where
 
 instance Monoid (v g) => Monoid (FlipAp g v) where
   mempty = FlipAp mempty
-  mappend (FlipAp x) (FlipAp y) = FlipAp (mappend x y)
 
 instance Group (v g) => Group (FlipAp g v) where
   negateG (FlipAp x) = FlipAp (negateG x)
