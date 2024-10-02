@@ -25,6 +25,7 @@ import Data.Align
 import Data.Functor.Compose
 import Data.Functor.Const
 import Data.Functor.Identity
+import Data.Kind (Type)
 import Data.Patch (Group(..))
 import Data.Semigroup
 import Data.Semigroup.Commutative
@@ -39,7 +40,7 @@ import Data.Vessel.ViewMorphism
 ------- Simple structure components -------
 
 -- | A functor-indexed container for a single deletable item.
-newtype SingleV (a :: *) (g :: * -> *) = SingleV { unSingleV :: g (First (Maybe a)) }
+newtype SingleV (a :: Type) (g :: Type -> Type) = SingleV { unSingleV :: g (First (Maybe a)) }
   deriving (Generic)
 
 deriving instance (Eq (g (First (Maybe a)))) => Eq (SingleV a g)

@@ -97,6 +97,7 @@ library vessel-tutorial
     StandaloneDeriving
     TemplateHaskell
     TypeFamilies
+    TypeOperators
     UndecidableInstances
 
   ghc-options:        -Wall -pgmL markdown-unlit
