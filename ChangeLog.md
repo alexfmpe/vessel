@@ -1,8 +1,9 @@
 # Revision history for vessel
 
-## Unreleased
+## 0.3.0.1
 
 * Support GHC 9.8 and 9.10
+* Support witherable 0.5
 
 * Add flag for enabling/disabling tutorial build
 
