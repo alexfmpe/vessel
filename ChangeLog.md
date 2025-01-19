@@ -1,5 +1,9 @@
 # Revision history for vessel
 
+## 0.3.0.2
+
+* Support GHC 9.12
+
 ## 0.3.0.1
 
 * Support GHC 9.8 and 9.10
